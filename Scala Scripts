@@ -1,0 +1,3 @@
+Отфильтровать все cj события с id атрибута 10057 и value view_content_block.
+
+spark.sql("SELECT filter(attributes, x -> x.member4.id == 10057)[0].member4.value FROM viewName WHERE filter(attributes, x -> x.member4.id == 10057)[0].member4.value = 'view_content_block'").show(100, false)
