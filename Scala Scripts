@@ -1,3 +1,3 @@
-Отфильтровать все cj события с id атрибута 10057 и value view_content_block.
+Отфильтровать value определенный событий по id атрибута. В случае, если нужна вся строка, в котором есть этот атрибута, то первый filter нужно заменить на *
 
 spark.sql("SELECT filter(attributes, x -> x.member4.id == 10057)[0].member4.value FROM viewName WHERE filter(attributes, x -> x.member4.id == 10057)[0].member4.value = 'view_content_block'").show(100, false)
